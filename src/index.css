@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased bg-background-light text-slate-900 transition-colors duration-300;
+  }
+  .dark body {
+    @apply bg-background-dark text-slate-50;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-white/95 border border-slate-200/80 shadow-soft backdrop-blur-md rounded-2xl;
+  }
+  .dark .glass-panel {
+    @apply bg-slate-900/85 border-slate-800/80 shadow-soft-dark;
+  }
+}
